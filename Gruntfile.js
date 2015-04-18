@@ -50,12 +50,9 @@ module.exports = function(grunt) {
 					browser:        true,
 					devel:          true,
 					globals: {
-						angular:    false,
-						$:          false,
-						moment:		false,
-						Pikaday: false,
-						module: false,
-						forge: false
+						angular:    true,
+						YT:		true,
+						
 					}
 				},
 				beforeconcat:   {
@@ -84,8 +81,8 @@ module.exports = function(grunt) {
 				},
 				build: {
 					files:  {},
-					src:    '.js',
-					dest:   '.min.js'
+					src:    'youtube.js',
+					dest:   'shm.youtube.min.js'
 				}
 			},
 			less: {
@@ -103,14 +100,20 @@ module.exports = function(grunt) {
 					src: ['.css'],
 					dest: '.min.css'
 				}
-			}/*,
+			},
 			karma: {
 				unit: {
-					configFile: publicPathRelativeRoot+'config/karma.conf.js',
+					configFile: 'karma.conf.js',
 					singleRun: true,
 					browsers: ['PhantomJS']
+				},
+				local: {
+					configFile: 'karma.conf.js',
+					singleRun: false,
+					autoWatch: true,
+					browsers: ['PhantomJS']
 				}
-			}*/
+			}
 		});
 		
 		
