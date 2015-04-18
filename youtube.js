@@ -1,27 +1,4 @@
 
-
-/**
-@toc
-
-@param {Object} scope (attrs that must be defined on the scope (i.e. in the controller) - they can't just be defined in the partial html). REMEMBER: use snake-case when setting these on the partial!
-TODO
-
-@param {Object} attrs REMEMBER: use snake-case when setting these on the partial! i.e. my-attr='1' NOT myAttr='1'
-TODO
-
-@dependencies
-TODO
-
-@usage
-partial / html:
-TODO
-
-controller / js:
-TODO
-
-//end: usage
-*/
-
 'use strict';
 
 angular.module('shm.youtube', [])
@@ -46,8 +23,6 @@ angular.module('shm.youtube', [])
 			attrs.width = attrs.width.indexOf('%') === -1 ? attrs.width + 'px' : attrs.width;
 			attrs.height = attrs.height || '100%';
 			attrs.height = attrs.height.indexOf('%') === -1 ? attrs.height + 'px' : attrs.height;
-
-			console.log(attrs)
 
 			// DOM container
 			element

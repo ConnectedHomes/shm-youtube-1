@@ -52,6 +52,11 @@ module.exports = function(grunt) {
 					globals: {
 						angular:    true,
 						YT:		true,
+						chai : true,
+						describe: true,
+						beforeEach: true,
+						inject : true,
+						it : true
 						
 					}
 				},
@@ -71,7 +76,7 @@ module.exports = function(grunt) {
 						ignores: ['**.min.js']
 					},
 					files: {
-						src: ['**.js']
+						src: ['**.js', '!karma.conf.js']
 					}
 				}
 			},
@@ -83,22 +88,6 @@ module.exports = function(grunt) {
 					files:  {},
 					src:    'youtube.js',
 					dest:   'shm.youtube.min.js'
-				}
-			},
-			less: {
-				development: {
-					options: {
-					},
-					files: {
-						"main.css": "_base.less",
-						".css": "_.less"
-					}
-				}
-			},
-			cssmin: {
-				dev: {
-					src: ['.css'],
-					dest: '.min.css'
 				}
 			},
 			karma: {
@@ -123,7 +112,7 @@ module.exports = function(grunt) {
 		*/
 		// Default task(s).
 		// grunt.registerTask('default', ['jshint:beforeconcat', 'less:development', 'concat:devJs', 'concat:devCss']);
-		grunt.registerTask('default', ['jshint:beforeconcatQ', 'less:development', 'cssmin', 'uglify:build']);
+		grunt.registerTask('default', ['jshint:beforeconcatQ', 'uglify:build']);
 	
 	}
 	init({});		//initialize here for defaults (init may be called again later within a task)

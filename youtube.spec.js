@@ -1,3 +1,5 @@
+'use strict';
+
 var expect = chai.expect;
 var assert = chai.assert;
 
@@ -32,7 +34,7 @@ describe('shm.youtube', function(){
           expect(spy).to.have.been.called();
           expect(spy2).to.have.been.called();
           done();
-        }, 1000)
+        }, 1000);
       });
 
       it('should expose YT on global namespace', function() {
@@ -46,10 +48,12 @@ describe('shm.youtube', function(){
 
   describe('directive - youtube', function(){
 
-  	describe('When video attribute is omitted', function() {
+    var element;
+
+    describe('When video attribute is omitted', function() {
       it('should throw an error', inject(function ($compile) {
         element = angular.element('<youtube></youtube>');
-        assert.throw($compile(element), Error)
+        assert.throw($compile(element), Error);
       }));
     });
 
