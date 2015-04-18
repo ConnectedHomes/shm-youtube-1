@@ -23,4 +23,4 @@ Use that tag
 </youtube>
 ```
 
-The mercy attribute is the timt delay in milliseconds until the DOM element gets replaced with the iframe. This can be useful to avoid repaints while transitioning from states.
+The mercy attribute is the time delay in milliseconds until the DOM element gets replaced with the iframe. This can be useful to avoid repaints while transitioning from states.
