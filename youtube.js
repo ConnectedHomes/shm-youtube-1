@@ -31,7 +31,7 @@ angular.module('shm.youtube', [])
 				.css('width', attrs.width)
 				.attr('class', attrs.class);
 
-			element.css('background', 'url(https://s.ytimg.com/yts/img/icn_loading_animated-vflff1Mjj.gif) center black no-repeat');
+			element.css('background', 'url(//s.ytimg.com/yts/img/icn_loading_animated-vflff1Mjj.gif) center black no-repeat');
 
 			YoutubeAPI.loadBinary(function() {
 
@@ -74,7 +74,7 @@ angular.module('shm.youtube', [])
     callbacks.push(cb);
     loaded = 1;
 		var tag = document.createElement('script');
-    tag.src = "https://www.youtube.com/iframe_api";
+    tag.src = "//www.youtube.com/iframe_api";
     var firstScriptTag = document.getElementsByTagName('script')[0];
     firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);  
     $window.onYouTubeIframeAPIReady = this._apiReady;
