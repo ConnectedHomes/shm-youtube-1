@@ -1,11 +1,10 @@
-box: astonish/astonish-wercker-box@0.2.12
+box: olger/box-yeoman@0.5.5
 # Build definition
 build:
   # The steps that will be executed on build
   steps:
-    # A step that executes `npm install` command
+    - olger/yeoman-bower-install@0.5.3
     - npm-install
-    # A step that executes `npm test` command
     - npm-test
 
 deploy:
