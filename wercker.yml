@@ -1,4 +1,4 @@
-box: shmedia/wercker
+box: shmedia/wercker:2.2.1
 build:
   steps:
     - npm-install 
