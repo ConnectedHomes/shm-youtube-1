@@ -2,9 +2,9 @@ box: node:boron
 build:
   steps:
     - script:
-        name: Install bower
-        code: npm install -g bower
-    - npm-install
+        name: Install global npm fluff
+        code: npm install -g bower grunt-cli
+    - npm-install 
     - npm-test
 deploy:
   steps:
