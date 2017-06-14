@@ -1,9 +1,9 @@
 box: node:boron
 build:
   steps:
-    - script
-      name: Install bower
-      code: npm install -g bower
+    - script:
+        name: Install bower
+        code: npm install -g bower
     - npm-install
     - npm-test
 deploy:
