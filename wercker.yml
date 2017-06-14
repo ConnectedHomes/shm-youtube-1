@@ -1,9 +1,6 @@
-box: node:boron
+box: shmedia/wercker
 build:
   steps:
-    - script:
-        name: Install global npm fluff
-        code: npm install -g bower grunt-cli
     - npm-install 
     - npm-test
 deploy:
