@@ -1,12 +1,11 @@
-box: olger/box-yeoman@0.5.5
-# Build definition
+box: node:boron
 build:
-  # The steps that will be executed on build
   steps:
-    - olger/yeoman-bower-install@0.5.3
+    - script
+      name: Install bower
+      code: npm install -g bower
     - npm-install
     - npm-test
-
 deploy:
   steps:
     - kwakayama/npm-publish@0.0.2
