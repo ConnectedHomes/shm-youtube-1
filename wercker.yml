@@ -1,6 +1,9 @@
 box: shmedia/wercker:2.2.1
 build:
   steps:
+    - script:
+        name: Install global npm modules
+        code: npm i -g grunt-cli
     - npm-install 
     - npm-test
 deploy:
